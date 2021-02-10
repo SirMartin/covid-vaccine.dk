@@ -11,7 +11,7 @@ const FILTERS = {
 
 const CALCULATIONS = {
   [FILTERS.parcial]: totals =>
-    totals.porcentajePoblacionAdministradas - totals.porcentajePoblacionCompletas,
+    totals.porcentajePoblacionAdministradas,
   [FILTERS.completa]: totals =>
     totals.porcentajePoblacionCompletas
 }

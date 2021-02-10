@@ -5,21 +5,13 @@ import { useState, useEffect, useRef } from 'react'
 import styles from 'styles/I18nWidget.module.css'
 
 const LOCALES = {
-  es: {
-    name: 'Castellano',
-    zone: 'España'
+  dk: {
+    name: 'Dansk',
+    zone: 'Danmark'
   },
-  ca: {
-    name: 'Català',
-    zone: 'Catalunya'
-  },
-  gl: {
-    name: 'Galego',
-    zone: 'Galicia'
-  },
-  eu: {
-    name: 'Euskara',
-    zone: 'Euskadi'
+  en: {
+    name: 'English',
+    zone: 'Danmark'
   }
 }
 
@@ -57,7 +49,7 @@ const I18nWidget = () => {
           onClick={() => setDisplay(!display)}
           ref={buttonLangRef}
         >
-          <img src={`flag-${locale}.svg`} alt={`Bandera de ${zone}`} />
+          <img src={`flag-${locale}.svg`} alt={`Flag of ${zone}`} />
           <span>{name}</span>
         </button>
         {options?.length && display

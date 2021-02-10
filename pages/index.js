@@ -4,8 +4,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Changelog from 'components/Changelog.jsx'
-import Contributors from 'components/Contributors.jsx'
+// import Changelog from 'components/Changelog.jsx'
+// import Contributors from 'components/Contributors.jsx'
 import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
@@ -13,7 +13,7 @@ import Progress from 'components/Progress.jsx'
 import Prevision from 'components/Prevision.jsx'
 import Select from 'components/Select'
 import I18nWidget from 'components/I18nWidget.jsx'
-import Share from 'components/Share.jsx'
+// import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
 import TimeAgo from 'components/TimeAgo.jsx'
 import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
@@ -30,7 +30,7 @@ import {
 import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 import { useTranslate } from 'hooks/useTranslate'
 import ClientSideComponent from 'components/ClientSideComponent'
-import SpainMap from 'components/SpainMap'
+// import SpainMap from 'components/SpainMap'
 
 export default function Home ({ contributors, data, info, reports, chartDatasets }) {
   const [filter, setFilter] = useState('Totales')
@@ -39,7 +39,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
   const translate = useTranslate()
 
   const totals = useMemo(
-    () => reportFound !== undefined ? reportFound.find(({ ccaa }) => ccaa === filter) : data.find(({ ccaa }) => ccaa === filter),
+    () => reportFound !== undefined ? reportFound.find(({ region }) => region === filter) : data.find(({ region }) => region === filter),
     [data, filter, reportFound]
   )
 
@@ -54,21 +54,18 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         <link rel='manifest' href='/manifest.json' />
         <meta name='theme-color' content='#d2effd' />
         <link rel='alternate' href='https://covid-vacuna.app/' hrefLang='x-default' />
-        <link rel='alternate' href='https://covid-vacuna.app/es-CA' hrefLang='ca-es' />
-        <link rel='alternate' href='https://covid-vacuna.app/es-GA' hrefLang='gl-es' />
-        <link rel='alternate' href='https://covid-vacuna.app/es-EU' hrefLang='eu-es' />
-        <link rel='alternate' href='https://covid-vacuna.app/es-ES' hrefLang='es-es' />
+        <link rel='alternate' href='https://covid-vacuna.app/en' hrefLang='en' />
 
       </Head>
       <div id='container' className={styles.container}>
         <main className={styles.main}>
           <h1 className={styles.title}>
-            {translate.home.tituloPricipal} {filter === 'Totales' ? 'España' : filter}
+            {translate.home.tituloPricipal} {filter === 'Totales' ? 'Danmark' : filter}
           </h1>
           <small className={styles.description}>
             {translate.home.datosActualizados} <TimeAgo timestamp={info.lastModified} />.
             {' '}{translate.home.fuente}{' '}
-            <a href='https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/vacunaCovid19.htm'>
+            <a href='https://covid19.ssi.dk/overvagningsdata/vaccinationstilslutning'>
               {translate.home.ministerioDeSanidad}
             </a>
           </small>
@@ -101,7 +98,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                     {isNaN(totals.dosisEntregadas) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadas}</NumberDigits>}
                   </p>
                 </div>
-                <div>
+                {/* <div>
                   <small>
                     <Image
                       alt={translate.home.alt.pfizerLogo}
@@ -128,7 +125,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                       {isNaN(totals.dosisEntregadasModerna) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadasModerna}</NumberDigits>}
                     </span>
                   </small>
-                </div>
+                </div> */}
               </section>
             </div>
 
@@ -146,13 +143,13 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                 <div>
                   <h3>{translate.terminos.dosisAdministradas}</h3>
                   <p>
-                    {isNaN(totals.dosisAdministradas) ? 'Desconocido' : <NumberDigits>{totals.dosisAdministradas}</NumberDigits>}
+                    {isNaN(totals.dosisAdministradas) ? 'Unknown' : <NumberDigits>{totals.dosisAdministradas}</NumberDigits>}
                   </p>
                 </div>
                 <div>
                   <h4>{translate.terminos.sobreDistribuidas}</h4>
                   <p className={styles.secondary}>
-                    {isNaN(totals.porcentajeEntregadas) ? 'Desconocido' : <NumberPercentage>{totals.porcentajeEntregadas}</NumberPercentage>}
+                    {isNaN(totals.porcentajeEntregadas) ? 'Unknown' : <NumberPercentage>{totals.porcentajeEntregadas}</NumberPercentage>}
                   </p>
                 </div>
               </section>
@@ -172,13 +169,13 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                 <div>
                   <h3>{translate.terminos.personasConPautaCompleta}</h3>
                   <p>
-                    {isNaN(totals.dosisPautaCompletada) ? 'Desconocido' : <NumberDigits>{totals.dosisPautaCompletada}</NumberDigits>}
+                    {isNaN(totals.dosisPautaCompletada) ? 'Unknown' : <NumberDigits>{totals.dosisPautaCompletada}</NumberDigits>}
                   </p>
                 </div>
                 <div>
                   <h4>{translate.terminos.sobreAdministradas}</h4>
                   <p className={styles.secondary}>
-                    {isNaN(totals.dosisPautaCompletada) || isNaN(totals.dosisAdministradas) ? 'Desconocido' : <NumberPercentage>{totals.dosisPautaCompletada / totals.dosisAdministradas}</NumberPercentage>}
+                    {isNaN(totals.dosisPautaCompletada) || isNaN(totals.dosisAdministradas) ? 'Unknown' : <NumberPercentage>{totals.dosisPautaCompletada / totals.dosisAdministradas}</NumberPercentage>}
                   </p>
                 </div>
               </section>
@@ -213,7 +210,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
 
         <h2 className={styles.subtitle}>{translate.home.porComunidadesAutonomas}</h2>
 
-        <SpainMap data={data} reportFound={reportFound} />
+        {/* <SpainMap data={data} reportFound={reportFound} /> */}
 
         <Table data={data} filter={filter} setFilter={setFilter} reportFound={reportFound} />
 
@@ -231,7 +228,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
           tooltip={DosisAdministradasTooltip}
         />
 
-        <h2 className={styles.subtitle}>
+        {/* <h2 className={styles.subtitle}>
           {translate.home.fuenteDatosEnlacesInteres}
         </h2>
         <ul>
@@ -253,12 +250,12 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
               {translate.home.fuente2}
             </a>
           </li>
-        </ul>
+        </ul> */}
 
-        <h2 className={styles.subtitle}>{translate.home.changelog}</h2>
-        <Changelog />
+        {/* <h2 className={styles.subtitle}>{translate.home.changelog}</h2>
+        <Changelog /> */}
 
-        <h2 className={styles.subtitle}>{translate.home.enLosMedios}</h2>
+        {/* <h2 className={styles.subtitle}>{translate.home.enLosMedios}</h2>
         <ul>
           <li>
             <a
@@ -293,7 +290,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         </ul>
 
         <h2 className={styles.subtitle}>{translate.home.contribuidores}</h2>
-        <Contributors contributors={contributors} />
+        <Contributors contributors={contributors} /> */}
       </div>
 
       <dialog id='vacunas-distribuidas-dialog'>
@@ -307,7 +304,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
 
       <I18nWidget />
 
-      <Share />
+      {/* <Share /> */}
 
       <Footer />
     </>

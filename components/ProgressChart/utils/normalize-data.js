@@ -27,9 +27,9 @@ export default function normalizeChartData () {
   const matrixMap = (v) => [year(v), month(v), day(v)]
   files = files.map(matrixMap)
 
-  // extract content with CCAA
+  // extract content with region
   // --> files state: [..., ['2021', '01', '12'], ...]
-  const ccaaHashMap = new Map()
+  const regionHashMap = new Map()
 
   const filePath = (s) => path.join(dataPath, s + '.json')
 
@@ -39,15 +39,15 @@ export default function normalizeChartData () {
     const mapKey = i
     const mapValue = fs.readFileSync(jsonPath, { encoding: 'utf8' })
 
-    ccaaHashMap.set(mapKey, JSON.parse(mapValue))
+    regionHashMap.set(mapKey, JSON.parse(mapValue))
   }
 
   // totals dataset
   const dataset = {}
 
-  for (const [k, v] of ccaaHashMap) {
+  for (const [k, v] of regionHashMap) {
     const TOTALS = 'Totales'
-    const filterOnlyTotals = (v) => v.ccaa === TOTALS
+    const filterOnlyTotals = (v) => v.region === TOTALS
 
     const getLastFilteredValue = v.filter(filterOnlyTotals).pop()
 

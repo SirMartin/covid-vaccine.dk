@@ -16,7 +16,7 @@ function Bold ({ text }) {
 export function DosisAdministradasTooltip ({ active, payload, label }) {
   if (!active) return null
 
-  const value = formatNumberToLocale(payload, 'es-ES')
+  const value = formatNumberToLocale(payload, 'da-DK')
 
   return (
     <div className={styles.chartTooltip}>
@@ -31,7 +31,7 @@ export function DosisAdministradasTooltip ({ active, payload, label }) {
 export function DosisEntregadasTooltip ({ active, payload, label }) {
   if (!active) return null
 
-  const value = formatNumberToLocale(payload, 'es-ES')
+  const value = formatNumberToLocale(payload, 'da-DK')
 
   return (
     <div className={styles.chartTooltip}>

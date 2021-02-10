@@ -1,31 +1,31 @@
 {
     "colorSwitcher": {
-        "lightTitleLabel": "Usa el tema claro",
+        "lightTitleLabel": "Bruge lyse farver",
         "lightAriaLabel": "Un sol que invertido parece el malo de Doom",
-        "standardTitleLabel": "Usa el tema dependiendo tu configuración de sistema",
+        "standardTitleLabel": "Brug din system farver",
         "standardAriaLabel": "Tus preferencias molonas de tu sistema",
-        "darkTitleLabel": "Usa el tema oscuro",
+        "darkTitleLabel": "Bruge mørke farver",
         "darkAriaLabel": "Una luna con ojos sospechosos que parece que está tramando algo jodido"
 
     },
     "home": {
-        "tituloPricipal": "Vacunación COVID-19 en",
-        "datosActualizados": "Datos actualizados",
-        "fuente": "Fuente:",
-        "ministerioDeSanidad": "Ministerio de Sanidad",
-        "mostrarReporteFecha": "Mostrar reporte a la fecha",
+        "tituloPricipal": "COVID-19 vaccinationstilslutning i",
+        "datosActualizados": "Data Opdateret",
+        "fuente": "Kilde:",
+        "ministerioDeSanidad": "Statens Serum Institut ",
+        "mostrarReporteFecha": "Vis rapport dato",
         "seleccionarFecha": "Seleccionar fecha",
         "descargarDatosJSON": "Descargar últimos datos en formato JSON",
         "incrustarDatos": "Quiero incrustar los datos de vacunación en otra página web",
-        "porComunidadesAutonomas": "Por comunidades autónomas",
-        "dosisEntregadas": "Dosis entregadas",
-        "dosisAdministradas": "Dosis administradas",
-        "sobreEntregadas": "% sobre entregadas",
-        "poblacionVacunada": "% población vacunada",
-        "pautaCompleta": "Pauta completa",
-        "poblacionTotalmenteVacunada": "% población totalmente vacunada",
-        "evolucionDosisEntregadas": "Evolución de dosis entregadas",
-        "evolucionDosisAdministradas": "Evolución de dosis administradas",
+        "porComunidadesAutonomas": "Regionsniveau",
+        "dosisEntregadas": "Doser leveret",
+        "dosisAdministradas": "Personer påbegyndt vaccination",
+        "sobreEntregadas": "% ud af de leverede",
+        "poblacionVacunada": "% personer som har påbegyndt vaccination",
+        "pautaCompleta": "Færdigvaccineret",
+        "poblacionTotalmenteVacunada": "% personer færdigvaccineret",
+        "evolucionDosisEntregadas": "Udvikling af leverede doser",
+        "evolucionDosisAdministradas": "Udvikling personer som har påbegyndt vaccination",
         "fuenteDatosEnlacesInteres": "Fuentes de datos y enlaces de interés",
         "fuente1": "Estrategia de Vacunación COVID-19 en España",
         "fuente2": "Información oficial sobre la vacunación contra el nuevo coronavirus",
@@ -60,17 +60,17 @@
         }
     },
     "progress": {
-        "verPoblacionVacunada": "Población vacunada",
-        "verPoblacionConPauta": "Población con pauta completa",
-        "estimacionPoblacionVacunada": "Estimación población vacunada",
-        "noDatos": "No disponemos de datos para esa fecha."
+        "verPoblacionVacunada": "Vaccineret personer",
+        "verPoblacionConPauta": "Færdigvaccineret personer",
+        "estimacionPoblacionVacunada": "Vaccineret befolkningsestimat",
+        "noDatos": "Vi har ikke data for denne dato."
     },
     "terminos": {
-        "dosisDistribuidas": "Dosis distribuidas",
-        "dosisAdministradas": "Dosis administradas",
-        "sobreDistribuidas": "% sobre distribuidas",
-        "personasConPautaCompleta": "Personas con pauta completa",
-        "sobreAdministradas": "% sobre administradas"
+        "dosisDistribuidas": "Doser leveret",
+        "dosisAdministradas": "Personer som har påbegyndt",
+        "sobreDistribuidas": "% doser ud af de leverede",
+        "personasConPautaCompleta": "Færdigvaccineret personer",
+        "sobreAdministradas": "% doser administradas"
     },
     "share": {
         "textParamUrl": "¡Sigue el progreso de la vacunación contra el COVID19 en esta web creada por @midudev!\n\n",

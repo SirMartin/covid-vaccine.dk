@@ -1,5 +1,5 @@
 // global SEO config
-const title = 'Estado y progreso vacunación COVID-19 España 2021'
+const title = 'Overvågningen af covid-19-vaccinationstilslutning i Danmark'
 const description =
   'Consulta el estado y progreso de la vacunación del COVID-19 de forma diaria según datos del gobierno.'
 
@@ -9,7 +9,7 @@ const SEO = {
   canonical: 'https://covid-vacuna.app',
   openGraph: {
     type: 'website',
-    locale: 'es_ES',
+    locale: 'da_DK',
     url: 'https://covid-vacuna.app',
     title,
     description,

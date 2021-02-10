@@ -13,8 +13,8 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
   const translate = useTranslate()
 
   const handleRowClick = useCallback(
-    ({ original: { ccaa } }) => () => {
-      setFilter(ccaa === filter ? 'Totales' : ccaa)
+    ({ original: { region } }) => () => {
+      setFilter(region === filter ? 'Totales' : region)
       window.scrollTo({ top: 0, behavior: 'smooth' })
     },
     [filter, setFilter]
@@ -65,8 +65,8 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
     () => [
       {
         Header: '',
-        accessor: 'ccaa',
-        format: (ccaa) => ccaa
+        accessor: 'region',
+        format: (region) => region
       },
       {
         Header: translate.home.dosisEntregadas,
@@ -111,7 +111,7 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
   } = useTable({ columns, data: tableData }, useSortBy)
 
   // totales siempre en la ultima fila
-  rows = [...rows.filter(row => row.id !== '19'), rows.find(row => row.id === '19')]
+  rows = [...rows.filter(row => row.id !== '5'), rows.find(row => row.id === '5')]
 
   return (
     <div className={styles.container}>
@@ -139,9 +139,9 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
         <tbody {...getTableBodyProps()}>
           {rows.map((row, index) => {
             prepareRow(row)
-            const className = row.id === '19'
+            const className = row.id === '5'
               ? styles.totales
-              : row.original.ccaa === filter
+              : row.original.region === filter
                 ? styles.selected
                 : ''
 
