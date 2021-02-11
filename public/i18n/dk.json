@@ -14,19 +14,19 @@
         "fuente": "Kilde:",
         "ministerioDeSanidad": "Statens Serum Institut ",
         "mostrarReporteFecha": "Vis rapport dato",
-        "seleccionarFecha": "Seleccionar fecha",
-        "descargarDatosJSON": "Descargar últimos datos en formato JSON",
-        "incrustarDatos": "Quiero incrustar los datos de vacunación en otra página web",
+        "seleccionarFecha": "Vælg dato",
+        "descargarDatosJSON": "Download de nyeste data i JSON-format",
+        "incrustarDatos": "Jeg vil integrere vaccinationsdataene på en anden webside",
         "porComunidadesAutonomas": "Regionsniveau",
-        "dosisEntregadas": "Doser leveret",
-        "dosisAdministradas": "Personer påbegyndt vaccination",
+        "deliveredDoses": "Doser leveret",
+        "appliedDoses": "Personer påbegyndt vaccination",
         "sobreEntregadas": "% ud af de leverede",
         "poblacionVacunada": "% personer som har påbegyndt vaccination",
-        "pautaCompleta": "Færdigvaccineret",
+        "bothDosesApplied": "Færdigvaccineret",
         "poblacionTotalmenteVacunada": "% personer færdigvaccineret",
-        "evolucionDosisEntregadas": "Udvikling af leverede doser",
-        "evolucionDosisAdministradas": "Udvikling personer som har påbegyndt vaccination",
-        "fuenteDatosEnlacesInteres": "Fuentes de datos y enlaces de interés",
+        "deliveredDosesEvolution": "Udvikling af leverede doser",
+        "appliedDosesEvolution": "Udvikling personer som har påbegyndt vaccination",
+        "fuenteDatosEnlacesInteres": "Datakilder og links af interesse",
         "fuente1": "Estrategia de Vacunación COVID-19 en España",
         "fuente2": "Información oficial sobre la vacunación contra el nuevo coronavirus",
         "changelog": "Changelog",
@@ -48,7 +48,7 @@
             "modernaLogo": "Moderna Logo",
             "vacunasAdministradas": "Vacunas administradas en España",
             "dosisCompletas": "Dosis completas subministradas",
-            "descargarDatos": "Descargar datos",
+            "descargarDatos": "Download data",
             "incrustarDatos": "Incrustar datos en una página web",
             "graficaSubiendo": "Gráfica subiendo",
             "emojiCiclista": "Emoji de ciclista",
@@ -66,11 +66,11 @@
         "noDatos": "Vi har ikke data for denne dato."
     },
     "terminos": {
-        "dosisDistribuidas": "Doser leveret",
-        "dosisAdministradas": "Personer som har påbegyndt",
+        "deliveredDoses": "Doser leveret",
+        "appliedDoses": "Personer som har påbegyndt",
         "sobreDistribuidas": "% doser ud af de leverede",
         "personasConPautaCompleta": "Færdigvaccineret personer",
-        "sobreAdministradas": "% doser administradas"
+        "overPeopleWithFirstDose": "% doser ud af de påbegyndte"
     },
     "share": {
         "textParamUrl": "¡Sigue el progreso de la vacunación contra el COVID19 en esta web creada por @midudev!\n\n",
@@ -78,13 +78,8 @@
         "textoButton": "¡Compártelo!"
     },
     "footer": {
-        "desarrolladoPor": "Desarrollado por",
-        "estadisticas": "Estadísticas",
-        "enviarSugerencia": "Enviar sugerencia"
-    },
-    "mapa": {
-        "sobreEntregadas": "sobre el total de entregadas",
-        "poblacionVacunada": "población vacunada",
-        "poblacionTotalmenteVacunada": "población totalmente vacunada"
+        "desarrolladoPor": "Udviklet af",
+        "estadisticas": "Statistikker",
+        "enviarSugerencia": "Send forslag"
     }
 }

@@ -5,7 +5,7 @@ import NumberPercentage from 'components/NumberPercentage.jsx'
 import TimeAgo from 'components/TimeAgo'
 
 export default function Embed ({ data, info, totalPopulation }) {
-  const totals = data.find(({ ccaa }) => ccaa === 'Totales')
+  const totals = data.find(({ region }) => region === 'Total')
 
   return (
     <>
@@ -23,10 +23,10 @@ export default function Embed ({ data, info, totalPopulation }) {
             <div>
               <h3>Dosis distribuidas:</h3>
               <p>
-                <NumberDigits>{totals.dosisEntregadas}</NumberDigits>
+                <NumberDigits>{totals.deliveredDoses}</NumberDigits>
               </p>
             </div>
-            <p>Es el <strong><NumberPercentage>{totals.dosisEntregadas / totalPopulation}</NumberPercentage></strong> del total de España</p>
+            <p>Es el <strong><NumberPercentage>{totals.deliveredDoses / totalPopulation}</NumberPercentage></strong> del total de España</p>
           </section>
         </div>
 
@@ -41,11 +41,11 @@ export default function Embed ({ data, info, totalPopulation }) {
             <div>
               <h3>Dosis administradas:</h3>
               <p>
-                <NumberDigits>{totals.dosisAdministradas}</NumberDigits>
+                <NumberDigits>{totals.appliedDoses}</NumberDigits>
               </p>
             </div>
             <p>
-              Supone el <strong><NumberPercentage>{totals.dosisAdministradas / totalPopulation}</NumberPercentage></strong> del total de España<br />Es el <strong><NumberPercentage>{totals.porcentajeEntregadas}</NumberPercentage></strong> sobre las vacunas distribuidas
+              Supone el <strong><NumberPercentage>{totals.appliedDoses / totalPopulation}</NumberPercentage></strong> del total de España<br />Es el <strong><NumberPercentage>{totals.percentageOverDelivered}</NumberPercentage></strong> sobre las vacunas distribuidas
             </p>
           </section>
         </div>
@@ -61,12 +61,12 @@ export default function Embed ({ data, info, totalPopulation }) {
             <div>
               <h3>Pauta completa:</h3>
               <p>
-                <NumberDigits>{totals.dosisPautaCompletada}</NumberDigits>
+                <NumberDigits>{totals.bothDosesApplied}</NumberDigits>
               </p>
             </div>
             <p>
               Personas que han recibido las dos dosis de la vacuna.<br />
-              Suponen un <strong><NumberPercentage>{totals.dosisPautaCompletada / totals.dosisAdministradas}</NumberPercentage></strong> de las dosis administradas.<br />Supone el <strong><NumberPercentage>{totals.dosisPautaCompletada / totalPopulation}</NumberPercentage></strong> del total de España
+              Suponen un <strong><NumberPercentage>{totals.bothDosesApplied / totals.appliedDoses}</NumberPercentage></strong> de las dosis administradas.<br />Supone el <strong><NumberPercentage>{totals.bothDosesApplied / totalPopulation}</NumberPercentage></strong> del total de España
             </p>
           </section>
         </div>
@@ -83,13 +83,13 @@ export default function Embed ({ data, info, totalPopulation }) {
 export async function getStaticProps () {
   const data = require('../public/data/latest.json')
   const info = require('../public/data/info.json')
-  const { population: { Totales } } = require('../public/data/bbdd.json')
+  const { population: { Total } } = require('../public/data/bbdd.json')
 
   return {
     props: {
       data,
       info,
-      totalPopulation: Totales
+      totalPopulation: Total
     }
   }
 }

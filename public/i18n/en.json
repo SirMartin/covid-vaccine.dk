@@ -15,18 +15,18 @@
         "ministerioDeSanidad": "Ministerio de Sanidad",
         "mostrarReporteFecha": "Show data from",
         "seleccionarFecha": "Select date",
-        "descargarDatosJSON": "Download the last data in JSON format",
-        "incrustarDatos": "I want to paste the vaccination data in other website",
+        "descargarDatosJSON": "Download the latest data in JSON format",
+        "incrustarDatos": "I want to embed the vaccination data on another web page",
         "porComunidadesAutonomas": "By regions",
-        "dosisEntregadas": "Delivered doses",
-        "dosisAdministradas": "Used doses",
+        "deliveredDoses": "Delivered doses",
+        "appliedDoses": "Used doses",
         "sobreEntregadas": "% of delivered",
         "poblacionVacunada": "% population with first dose",
-        "pautaCompleta": "Both doses",
+        "bothDosesApplied": "Both doses",
         "poblacionTotalmenteVacunada": "% population with both doses.",
-        "evolucionDosisEntregadas": "Evolution of delivered doses",
-        "evolucionDosisAdministradas": "Evolución de dosis administradas",
-        "fuenteDatosEnlacesInteres": "Fuentes de datos y enlaces de interés",
+        "deliveredDosesEvolution": "Evolution of delivered doses",
+        "appliedDosesEvolution": "Evolución de dosis administradas",
+        "fuenteDatosEnlacesInteres": "Data sources and links of interest",
         "fuente1": "Estrategia de Vacunación COVID-19 en España",
         "fuente2": "Información oficial sobre la vacunación contra el nuevo coronavirus",
         "changelog": "Changelog",
@@ -48,7 +48,7 @@
             "modernaLogo": "Moderna Logo",
             "vacunasAdministradas": "Vacunas administradas en España",
             "dosisCompletas": "Dosis completas subministradas",
-            "descargarDatos": "Descargar datos",
+            "descargarDatos": "Download data",
             "incrustarDatos": "Incrustar datos en una página web",
             "graficaSubiendo": "Gráfica subiendo",
             "emojiCiclista": "Emoji de ciclista",
@@ -66,11 +66,11 @@
         "noDatos": "No disponemos de datos para esa fecha."
     },
     "terminos": {
-        "dosisDistribuidas": "Dosis distribuidas",
-        "dosisAdministradas": "Dosis administradas",
-        "sobreDistribuidas": "% sobre distribuidas",
-        "personasConPautaCompleta": "Personas con pauta completa",
-        "sobreAdministradas": "% sobre administradas"
+        "deliveredDoses": "Delivered doses",
+        "appliedDoses": "Applied doses",
+        "sobreDistribuidas": "% over delivered",
+        "personasConPautaCompleta": "People with both doses",
+        "overPeopleWithFirstDose": "% over applied"
     },
     "share": {
         "textParamUrl": "¡Sigue el progreso de la vacunación contra el COVID19 en esta web creada por @midudev!\n\n",
@@ -81,10 +81,5 @@
         "desarrolladoPor": "Desarrollado por",
         "estadisticas": "Estadísticas",
         "enviarSugerencia": "Enviar sugerencia"
-    },
-    "mapa": {
-        "sobreEntregadas": "sobre el total de entregadas",
-        "poblacionVacunada": "población vacunada",
-        "poblacionTotalmenteVacunada": "población totalmente vacunada"
     }
 }

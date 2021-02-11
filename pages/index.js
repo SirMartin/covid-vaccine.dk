@@ -24,16 +24,15 @@ import styles from 'styles/Home.module.css'
 import useSearch from 'hooks/useSearchReport'
 import ProgressChart from 'components/ProgressChart'
 import {
-  DosisAdministradasTooltip,
-  DosisEntregadasTooltip
+  AppliedDosesTooltip,
+  DeliveredDosesTooltip
 } from 'components/ProgressChart/tooltips'
 import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 import { useTranslate } from 'hooks/useTranslate'
 import ClientSideComponent from 'components/ClientSideComponent'
-// import SpainMap from 'components/SpainMap'
 
 export default function Home ({ contributors, data, info, reports, chartDatasets }) {
-  const [filter, setFilter] = useState('Totales')
+  const [filter, setFilter] = useState('Total')
   const [valueSearch, setValueSearch] = useState('')
   const reportFound = useSearch({ valueSearch })
   const translate = useTranslate()
@@ -60,7 +59,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
       <div id='container' className={styles.container}>
         <main className={styles.main}>
           <h1 className={styles.title}>
-            {translate.home.tituloPricipal} {filter === 'Totales' ? 'Danmark' : filter}
+            {translate.home.tituloPricipal} {filter === 'Total' ? 'Danmark' : filter}
           </h1>
           <small className={styles.description}>
             {translate.home.datosActualizados} <TimeAgo timestamp={info.lastModified} />.
@@ -93,9 +92,9 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
               </header>
               <section>
                 <div>
-                  <h3>{translate.terminos.dosisDistribuidas}</h3>
+                  <h3>{translate.terminos.deliveredDoses}</h3>
                   <p>
-                    {isNaN(totals.dosisEntregadas) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadas}</NumberDigits>}
+                    {isNaN(totals.deliveredDoses) ? 'Unknown' : <NumberDigits>{totals.deliveredDoses}</NumberDigits>}
                   </p>
                 </div>
                 {/* <div>
@@ -141,15 +140,15 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
               </header>
               <section>
                 <div>
-                  <h3>{translate.terminos.dosisAdministradas}</h3>
+                  <h3>{translate.terminos.appliedDoses}</h3>
                   <p>
-                    {isNaN(totals.dosisAdministradas) ? 'Unknown' : <NumberDigits>{totals.dosisAdministradas}</NumberDigits>}
+                    {isNaN(totals.appliedDoses) ? 'Unknown' : <NumberDigits>{totals.appliedDoses}</NumberDigits>}
                   </p>
                 </div>
                 <div>
                   <h4>{translate.terminos.sobreDistribuidas}</h4>
                   <p className={styles.secondary}>
-                    {isNaN(totals.porcentajeEntregadas) ? 'Unknown' : <NumberPercentage>{totals.porcentajeEntregadas}</NumberPercentage>}
+                    {isNaN(totals.percentageOverDelivered) ? 'Unknown' : <NumberPercentage>{totals.percentageOverDelivered}</NumberPercentage>}
                   </p>
                 </div>
               </section>
@@ -169,13 +168,13 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                 <div>
                   <h3>{translate.terminos.personasConPautaCompleta}</h3>
                   <p>
-                    {isNaN(totals.dosisPautaCompletada) ? 'Unknown' : <NumberDigits>{totals.dosisPautaCompletada}</NumberDigits>}
+                    {isNaN(totals.bothDosesApplied) ? 'Unknown' : <NumberDigits>{totals.bothDosesApplied}</NumberDigits>}
                   </p>
                 </div>
                 <div>
-                  <h4>{translate.terminos.sobreAdministradas}</h4>
+                  <h4>{translate.terminos.overPeopleWithFirstDose}</h4>
                   <p className={styles.secondary}>
-                    {isNaN(totals.dosisPautaCompletada) || isNaN(totals.dosisAdministradas) ? 'Unknown' : <NumberPercentage>{totals.dosisPautaCompletada / totals.dosisAdministradas}</NumberPercentage>}
+                    {isNaN(totals.bothDosesApplied) || isNaN(totals.appliedDoses) ? 'Unknown' : <NumberPercentage>{totals.bothDosesApplied / totals.appliedDoses}</NumberPercentage>}
                   </p>
                 </div>
               </section>
@@ -214,18 +213,18 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
 
         <Table data={data} filter={filter} setFilter={setFilter} reportFound={reportFound} />
 
-        <h2 className={styles.subtitle}>{translate.home.evolucionDosisEntregadas}</h2>
+        <h2 className={styles.subtitle}>{translate.home.deliveredDosesEvolution}</h2>
 
         <ProgressChart
-          dataset={chartDatasets.dosisEntregadas}
-          tooltip={DosisEntregadasTooltip}
+          dataset={chartDatasets.deliveredDoses}
+          tooltip={DeliveredDosesTooltip}
         />
 
-        <h2 className={styles.subtitle}>{translate.home.evolucionDosisAdministradas}</h2>
+        <h2 className={styles.subtitle}>{translate.home.appliedDosesEvolution}</h2>
 
         <ProgressChart
-          dataset={chartDatasets.dosisAdministradas}
-          tooltip={DosisAdministradasTooltip}
+          dataset={chartDatasets.appliedDoses}
+          tooltip={AppliedDosesTooltip}
         />
 
         {/* <h2 className={styles.subtitle}>

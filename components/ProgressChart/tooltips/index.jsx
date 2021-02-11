@@ -13,7 +13,7 @@ function Bold ({ text }) {
   return <b style={{ color: 'var(--text-subtitle-color)' }}>{text}</b>
 }
 
-export function DosisAdministradasTooltip ({ active, payload, label }) {
+export function AppliedDosesTooltip ({ active, payload, label }) {
   if (!active) return null
 
   const value = formatNumberToLocale(payload, 'da-DK')
@@ -28,7 +28,7 @@ export function DosisAdministradasTooltip ({ active, payload, label }) {
   )
 }
 
-export function DosisEntregadasTooltip ({ active, payload, label }) {
+export function DeliveredDosesTooltip ({ active, payload, label }) {
   if (!active) return null
 
   const value = formatNumberToLocale(payload, 'da-DK')

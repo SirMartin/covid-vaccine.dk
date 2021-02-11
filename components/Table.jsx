@@ -14,7 +14,7 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
 
   const handleRowClick = useCallback(
     ({ original: { region } }) => () => {
-      setFilter(region === filter ? 'Totales' : region)
+      setFilter(region === filter ? 'Total' : region)
       window.scrollTo({ top: 0, behavior: 'smooth' })
     },
     [filter, setFilter]
@@ -27,35 +27,35 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
     () => reportFound !== undefined
       ? reportFound.map(row => {
           const {
-            dosisPautaCompletada,
-            porcentajeEntregadas,
-            porcentajePoblacionAdministradas,
-            porcentajePoblacionCompletas,
+            bothDosesApplied,
+            percentageOverDelivered,
+            percentagePopulationVaccinated,
+            percentagePopulationBothDoses,
             ...rest
           } = row
 
           return {
-            dosisPautaCompletada: !isNaN(dosisPautaCompletada) ? dosisPautaCompletada.toFixed(4) : 0,
-            porcentajeEntregadas: porcentajeEntregadas !== null ? porcentajeEntregadas.toFixed(4) : 0,
-            porcentajePoblacionAdministradas: porcentajePoblacionAdministradas !== null ? porcentajePoblacionAdministradas.toFixed(4) : 0,
-            porcentajePoblacionCompletas: porcentajePoblacionCompletas !== null ? porcentajePoblacionCompletas.toFixed(4) : 0,
+            bothDosesApplied: !isNaN(bothDosesApplied) ? bothDosesApplied.toFixed(4) : 0,
+            percentageOverDelivered: percentageOverDelivered !== null ? percentageOverDelivered.toFixed(4) : 0,
+            percentagePopulationVaccinated: percentagePopulationVaccinated !== null ? percentagePopulationVaccinated.toFixed(4) : 0,
+            percentagePopulationBothDoses: percentagePopulationBothDoses !== null ? percentagePopulationBothDoses.toFixed(4) : 0,
             ...rest
           }
         })
       : data.map(row => {
         const {
-          dosisPautaCompletada,
-          porcentajeEntregadas,
-          porcentajePoblacionAdministradas,
-          porcentajePoblacionCompletas,
+          bothDosesApplied,
+          percentageOverDelivered,
+          percentagePopulationVaccinated,
+          percentagePopulationBothDoses,
           ...rest
         } = row
 
         return {
-          dosisPautaCompletada: !isNaN(dosisPautaCompletada) ? dosisPautaCompletada.toFixed(4) : 0,
-          porcentajeEntregadas: porcentajeEntregadas !== null ? porcentajeEntregadas.toFixed(4) : 0,
-          porcentajePoblacionAdministradas: porcentajePoblacionAdministradas !== null ? porcentajePoblacionAdministradas.toFixed(4) : 0,
-          porcentajePoblacionCompletas: porcentajePoblacionCompletas !== null ? porcentajePoblacionCompletas.toFixed(4) : 0,
+          bothDosesApplied: !isNaN(bothDosesApplied) ? bothDosesApplied.toFixed(4) : 0,
+          percentageOverDelivered: percentageOverDelivered !== null ? percentageOverDelivered.toFixed(4) : 0,
+          percentagePopulationVaccinated: percentagePopulationVaccinated !== null ? percentagePopulationVaccinated.toFixed(4) : 0,
+          percentagePopulationBothDoses: percentagePopulationBothDoses !== null ? percentagePopulationBothDoses.toFixed(4) : 0,
           ...rest
         }
       }), [reportFound]
@@ -69,33 +69,33 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
         format: (region) => region
       },
       {
-        Header: translate.home.dosisEntregadas,
-        accessor: 'dosisEntregadas',
+        Header: translate.home.deliveredDoses,
+        accessor: 'deliveredDoses',
         format: formatDigit
       },
       {
-        Header: translate.home.dosisAdministradas,
-        accessor: 'dosisAdministradas',
+        Header: translate.home.appliedDoses,
+        accessor: 'appliedDoses',
         format: formatDigit
       },
       {
         Header: translate.home.sobreEntregadas,
-        accessor: 'porcentajeEntregadas',
+        accessor: 'percentageOverDelivered',
         format: formatPercentage
       },
       {
         Header: translate.home.poblacionVacunada,
-        accessor: 'porcentajePoblacionAdministradas',
+        accessor: 'percentagePopulationVaccinated',
         format: formatPercentage
       },
       {
-        Header: translate.home.pautaCompleta,
-        accessor: 'dosisPautaCompletada',
+        Header: translate.home.bothDosesApplied,
+        accessor: 'bothDosesApplied',
         format: formatDigit
       },
       {
         Header: translate.home.poblacionTotalmenteVacunada,
-        accessor: 'porcentajePoblacionCompletas',
+        accessor: 'percentagePopulationBothDoses',
         format: formatPercentage
       }
     ],

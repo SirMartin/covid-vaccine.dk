@@ -11,9 +11,9 @@ const FILTERS = {
 
 const CALCULATIONS = {
   [FILTERS.parcial]: totals =>
-    totals.porcentajePoblacionAdministradas,
+    totals.percentagePopulationVaccinated,
   [FILTERS.completa]: totals =>
-    totals.porcentajePoblacionCompletas
+    totals.percentagePopulationBothDoses
 }
 
 export default function Progress ({ totals }) {

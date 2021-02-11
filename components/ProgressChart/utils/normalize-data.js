@@ -46,7 +46,7 @@ export default function normalizeChartData () {
   const dataset = {}
 
   for (const [k, v] of regionHashMap) {
-    const TOTALS = 'Totales'
+    const TOTALS = 'Total'
     const filterOnlyTotals = (v) => v.region === TOTALS
 
     const getLastFilteredValue = v.filter(filterOnlyTotals).pop()
@@ -80,12 +80,12 @@ export default function normalizeChartData () {
 
 // fields to export to chart
 export const datasetFields = [
-  'dosisAdministradas',
-  'dosisEntregadas',
-  'dosisEntregadasModerna',
-  'dosisEntregadasPfizer',
-  'dosisPautaCompletada',
-  'porcentajeEntregadas',
-  'porcentajePoblacionAdministradas',
-  'porcentajePoblacionCompletas'
+  'deliveredDoses',
+  'appliedDoses',
+  'percentagePopulationVaccinated',
+  // 'dosisEntregadasModerna',
+  // 'dosisEntregadasPfizer',
+  'bothDosesApplied',
+  'percentagePopulationBothDoses',
+  'percentageOverDelivered'
 ]
