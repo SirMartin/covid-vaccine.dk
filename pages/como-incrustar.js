@@ -13,7 +13,7 @@ export default function EjemploEmbed () {
   return (
     <>
       <Head>
-        <title>¿Cómo puedo incrustar en una web los datos de vacunación del COVID-19? - covid-vacuna.app</title>
+        <title>¿Cómo puedo incrustar en una web los datos de vacunación del COVID-19? - covid-vaccine-dk.vercel.app</title>
       </Head>
       <section id='container'>
         <Link href='/'>
@@ -34,7 +34,7 @@ export default function EjemploEmbed () {
 
         <h2>Copia este código</h2>
         <textarea
-          onChange={() => {}} onFocus={handleFocus} autoComplete='off' autoCapitalize='none' value='&lt;div style=&quot;position: relative; padding-bottom: 56.25%;&quot;&gt; &lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://covid-vacuna.app/embed&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot; &gt;&lt;/iframe&gt; &lt;/div&gt;'
+          onChange={() => {}} onFocus={handleFocus} autoComplete='off' autoCapitalize='none' value='&lt;div style=&quot;position: relative; padding-bottom: 56.25%;&quot;&gt; &lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://covid-vaccine-dk.vercel.app/embed&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot; &gt;&lt;/iframe&gt; &lt;/div&gt;'
         />
         <h2>Previsualización</h2>
         <p>Así es como quedará el embed en tu página web.</p>
@@ -42,7 +42,7 @@ export default function EjemploEmbed () {
           <iframe
             width='800'
             height='450'
-            src='https://covid-vacuna.app/embed'
+            src='https://covid-vaccine-dk.vercel.app/embed'
             frameborder='0'
             scrolling='no'
             style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}

@@ -24,9 +24,7 @@ export default function Footer () {
         <span>&bull;</span>
         <a href='https://github.com/sirmartin/covid-vacuna' rel='nofollow noreferrer' target='_blank'>GitHub</a>
         <span>&bull;</span>
-        <a href='https://app.usefathom.com/share/myexkunw/covid-vacuna.vercel.app' rel='nofollow noreferrer' target='_blank'>{translate.footer.statistics}</a>
-        <span>&bull;</span>
-        <a href='https://github.com/midudev/covid-vacuna/issues/new' rel='nofollow noreferrer' target='_blank'>{translate.footer.suggestions}</a>
+        <a href='https://github.com/sirmartin/covid-vacuna/issues/new' rel='nofollow noreferrer' target='_blank'>{translate.footer.suggestions}</a>
       </div>
     </footer>
   )

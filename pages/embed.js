@@ -72,7 +72,7 @@ export default function Embed ({ data, info, totalPopulation }) {
         </div>
 
         <small className={styles.description}>
-          <a href='https://covid-vacuna.app'><strong>covid-vacuna.app</strong></a> - Datos actualizados <TimeAgo timestamp={info.lastModified} />.
+          <a href='https://covid-vaccine-dk.vercel.app'><strong>covid-vaccine-dk.vercel.app</strong></a> - Datos actualizados <TimeAgo timestamp={info.lastModified} />.
         </small>
 
       </div>
