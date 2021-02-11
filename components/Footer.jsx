@@ -13,6 +13,7 @@ export default function Footer () {
         >
           {translate.footer.adaptedBy}{' '}SirMartin
         </a>
+        <span>&bull;</span>
         <a
           href='https://midu.dev'
           target='_blank'

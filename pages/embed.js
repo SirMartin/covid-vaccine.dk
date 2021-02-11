@@ -3,9 +3,11 @@ import styles from 'styles/Embed.module.css'
 import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
 import TimeAgo from 'components/TimeAgo'
+import { useTranslate } from 'hooks/useTranslate'
 
 export default function Embed ({ data, info, totalPopulation }) {
   const totals = data.find(({ region }) => region === 'Total')
+  const translate = useTranslate()
 
   return (
     <>
@@ -14,38 +16,39 @@ export default function Embed ({ data, info, totalPopulation }) {
         <div className={styles.card}>
           <img
             className={styles.cardImage}
-            src='/mapa.png'
-            alt='Vacunas distribuidas en España'
-            width={150}
+            src='/embed-map.png'
+            alt='{translate.embed.deliveredDosesAlt}'
+            width={370}
             height={150}
           />
           <section>
             <div>
-              <h3>Dosis distribuidas:</h3>
+              <h3>{translate.embed.deliveredDoses}</h3>
               <p>
                 <NumberDigits>{totals.deliveredDoses}</NumberDigits>
               </p>
             </div>
-            <p>Es el <strong><NumberPercentage>{totals.deliveredDoses / totalPopulation}</NumberPercentage></strong> del total de España</p>
+            <p><strong><NumberPercentage>{totals.deliveredDoses / totalPopulation}</NumberPercentage></strong> {translate.embed.deliveredDosesContent}</p>
           </section>
         </div>
 
         <div className={styles.card}>
           <img
             src='/vacuna.png'
-            alt='Vacunas administradas en España'
+            alt='{translate.Embed.appliedDosesAlt}'
             width={150}
             height={150}
           />
           <section>
             <div>
-              <h3>Dosis administradas:</h3>
+              <h3>{translate.embed.appliedDoses}</h3>
               <p>
                 <NumberDigits>{totals.appliedDoses}</NumberDigits>
               </p>
             </div>
             <p>
-              Supone el <strong><NumberPercentage>{totals.appliedDoses / totalPopulation}</NumberPercentage></strong> del total de España<br />Es el <strong><NumberPercentage>{totals.percentageOverDelivered}</NumberPercentage></strong> sobre las vacunas distribuidas
+              <strong><NumberPercentage>{totals.appliedDoses / totalPopulation}</NumberPercentage></strong> {translate.embed.appliedDosesContent1}
+              <br /><strong><NumberPercentage>{totals.percentageOverDelivered}</NumberPercentage></strong> {translate.embed.appliedDosesContent2}
             </p>
           </section>
         </div>
@@ -53,26 +56,27 @@ export default function Embed ({ data, info, totalPopulation }) {
         <div className={styles.card}>
           <img
             src='/vacunas-completas.png'
-            alt='Dosis completas subministradas'
+            alt='{translate.embed.bothDosesContentAlt}'
             width={150}
             height={150}
           />
           <section>
             <div>
-              <h3>Pauta completa:</h3>
+              <h3>{translate.embed.bothDoses}</h3>
               <p>
                 <NumberDigits>{totals.bothDosesApplied}</NumberDigits>
               </p>
             </div>
             <p>
-              Personas que han recibido las dos dosis de la vacuna.<br />
-              Suponen un <strong><NumberPercentage>{totals.bothDosesApplied / totals.appliedDoses}</NumberPercentage></strong> de las dosis administradas.<br />Supone el <strong><NumberPercentage>{totals.bothDosesApplied / totalPopulation}</NumberPercentage></strong> del total de España
+              {translate.embed.bothDosesContent1}<br />
+              <strong><NumberPercentage>{totals.bothDosesApplied / totals.appliedDoses}</NumberPercentage></strong> {translate.embed.bothDosesContent2}<br />
+              <strong><NumberPercentage>{totals.bothDosesApplied / totalPopulation}</NumberPercentage></strong> {translate.embed.bothDosesContent3}
             </p>
           </section>
         </div>
 
         <small className={styles.description}>
-          <a href='https://covid-vaccine-dk.vercel.app'><strong>covid-vaccine-dk.vercel.app</strong></a> - Datos actualizados <TimeAgo timestamp={info.lastModified} />.
+          <a href='https://covid-vaccine-dk.vercel.app'><strong>covid-vaccine-dk.vercel.app</strong></a> - {translate.embed.updatedDate} <TimeAgo timestamp={info.lastModified} />.
         </small>
 
       </div>

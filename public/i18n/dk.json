@@ -82,5 +82,30 @@
         "adaptedBy": "Tilpasset af",
         "statistics": "Statistikker",
         "suggestions": "Send forslag"
+    },
+    "howtoembed": {
+        "pageTitle": "¿Cómo puedo incrustar en una web los datos de vacunación del COVID-19?",
+        "backToHome": "Vol222ver a la página principal",
+        "altImage": "Incrustar datos en una página web",
+        "mainTitle": "¿Cómo incrustar la información de vacunación en otra página?",
+        "subTitle": "Si quieres, puedes añadir los datos de vacunación actualizados en tu página web. Para ello sólo tienes que copiar el código de incrustación en tu sitio.",
+        "copyCode": "Copia este código",
+        "previsualization": "Previsualización",
+        "previsualizationSubtitle": "Así es como quedará el embed en tu página web."
+    },
+    "embed" : {
+        "deliveredDoses": "Doser leveret:",
+        "deliveredDosesContent": "af personer i Danmark.",
+        "deliveredDosesAlt": "Leveret vacciner i Danmark",
+        "appliedDoses": "Påbegyndt personer",
+        "appliedDosesContent1": "af personer i Danmark.",
+        "appliedDosesContent2": "af leveret doser.",
+        "appliedDosesAlt": "Vaccinerede personer i Danmark",
+        "bothDoses": "Færdigvaccineret",
+        "bothDosesContentAlt": "Færdig Vaccineret",
+        "bothDosesContent1": "Personer der har modtaget begge doser af vaccinen.",
+        "bothDosesContent2": "af leveret doser.",
+        "bothDosesContent3": "af personer i Danmark.",
+        "updatedDate": "Sidste opdatering"
     }
 }

@@ -82,5 +82,30 @@
         "adaptedBy": "Adapted by",
         "statistics": "Statistics",
         "suggestions": "Send suggestion"
+    },
+    "howtoembed": {
+        "pageTitle": "How can I embed the COVID-19 vaccination data on a website?",
+        "backToHome": "Back to home",
+        "altImage": "Embed data in a website",
+        "mainTitle": "How to embed vaccination information on another page?",
+        "subTitle": "If you want, you can add updated vaccination data on your website. To do this you just have to copy the embed code on your site.",
+        "copyCode": "Copy this code",
+        "previsualization": "Previsualization",
+        "previsualizationSubtitle": "This is how the embed will look on your website."
+    },
+    "embed" : {
+        "deliveredDoses": "Delivered doses:",
+        "deliveredDosesContent": "of people in Denmark.",
+        "deliveredDosesAlt": "Delivered vaccines in Denmark",
+        "appliedDoses": "People with first dose",
+        "appliedDosesContent1": "of people in Denmark.",
+        "appliedDosesContent2": "of delivered doses.",
+        "appliedDosesAlt": "Vaccinated people in Denmark",
+        "bothDoses": "Both doses",
+        "bothDosesContentAlt": "Completely Vaccinated",
+        "bothDosesContent1": "People who have received both doses of the vaccine.",
+        "bothDosesContent2": "of delivered doses.",
+        "bothDosesContent3": "of people in Denmark.",
+        "updatedDate": "Last updated"
     }
 }
