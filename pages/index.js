@@ -13,7 +13,7 @@ import Progress from 'components/Progress.jsx'
 import Prevision from 'components/Prevision.jsx'
 import Select from 'components/Select'
 import I18nWidget from 'components/I18nWidget.jsx'
-// import Share from 'components/Share.jsx'
+import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
 import TimeAgo from 'components/TimeAgo.jsx'
 import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
@@ -84,7 +84,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                 <Image
                   className={styles.cardImage}
                   src='/mapa.png'
-                  alt={translate.home.alt.vacunasDistribuidas}
+                  alt={translate.home.alt.deliveredDoses}
                   width={150}
                   height={150}
                   priority
@@ -108,7 +108,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                       priority
                     />
                     <span>
-                      {isNaN(totals.dosisEntregadasPfizer) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadasPfizer}</NumberDigits>}
+                      {isNaN(totals.dosisEntregadasPfizer) ? 'Unknown' : <NumberDigits>{totals.dosisEntregadasPfizer}</NumberDigits>}
                     </span>
                   </small>
                   <small>
@@ -121,7 +121,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                       priority
                     />
                     <span>
-                      {isNaN(totals.dosisEntregadasModerna) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadasModerna}</NumberDigits>}
+                      {isNaN(totals.dosisEntregadasModerna) ? 'Unknown' : <NumberDigits>{totals.dosisEntregadasModerna}</NumberDigits>}
                     </span>
                   </small>
                 </div> */}
@@ -208,8 +208,6 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         </main>
 
         <h2 className={styles.subtitle}>{translate.home.porComunidadesAutonomas}</h2>
-
-        {/* <SpainMap data={data} reportFound={reportFound} /> */}
 
         <Table data={data} filter={filter} setFilter={setFilter} reportFound={reportFound} />
 
@@ -303,7 +301,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
 
       <I18nWidget />
 
-      {/* <Share /> */}
+      <Share />
 
       <Footer />
     </>

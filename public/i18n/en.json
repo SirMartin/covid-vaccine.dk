@@ -12,7 +12,7 @@
         "tituloPricipal": "COVID-19 vaccination",
         "datosActualizados": "Updated data",
         "fuente": "Source:",
-        "ministerioDeSanidad": "Ministerio de Sanidad",
+        "ministerioDeSanidad": "Statens Serum Institut",
         "mostrarReporteFecha": "Show data from",
         "seleccionarFecha": "Select date",
         "descargarDatosJSON": "Download the latest data in JSON format",
@@ -25,7 +25,7 @@
         "bothDosesApplied": "Both doses",
         "poblacionTotalmenteVacunada": "% population with both doses.",
         "deliveredDosesEvolution": "Evolution of delivered doses",
-        "appliedDosesEvolution": "Evolución de dosis administradas",
+        "appliedDosesEvolution": "Evolution of applied doses",
         "fuenteDatosEnlacesInteres": "Data sources and links of interest",
         "fuente1": "Estrategia de Vacunación COVID-19 en España",
         "fuente2": "Información oficial sobre la vacunación contra el nuevo coronavirus",
@@ -43,7 +43,7 @@
         "medio3": "1.000 voluntarios para una sola web: así evoluciona la vacunación en tu comunidad (El Confidencial)",
         "contribuidores": "Contribuidores",
         "alt": {
-            "vacunasDistribuidas": "Vacunas distribuidas en España",
+            "deliveredDoses": "Vaccines distributed in Denmark",
             "pfizerLogo": "Pfizer Logo",
             "modernaLogo": "Moderna Logo",
             "vacunasAdministradas": "Vacunas administradas en España",
@@ -60,10 +60,10 @@
         }
     },
     "progress": {
-        "verPoblacionVacunada": "Población vacunada",
-        "verPoblacionConPauta": "Población con pauta completa",
-        "estimacionPoblacionVacunada": "Estimación población vacunada",
-        "noDatos": "No disponemos de datos para esa fecha."
+        "verPoblacionVacunada": "Vaccinated population",
+        "verPoblacionConPauta": "Population with both doses",
+        "estimacionPoblacionVacunada": "Vaccinated population estimate",
+        "noDatos": "We do not have data for that date."
     },
     "terminos": {
         "deliveredDoses": "Delivered doses",
@@ -73,13 +73,14 @@
         "overPeopleWithFirstDose": "% over applied"
     },
     "share": {
-        "textParamUrl": "¡Sigue el progreso de la vacunación contra el COVID19 en esta web creada por @midudev!\n\n",
-        "titleAnchor": "Comparte este enlace en Twitter",
-        "textoButton": "¡Compártelo!"
+        "textParamUrl": "Follow the progress of vaccination against COVID19 in Denmark on this website cc/ @SirMartinPiribi @midudev\n\n",
+        "titleAnchor": "Share this link on Twitter",
+        "textoButton": "Share it!"
     },
     "footer": {
-        "desarrolladoPor": "Desarrollado por",
-        "estadisticas": "Estadísticas",
-        "enviarSugerencia": "Enviar sugerencia"
+        "developedBy": ", developed by",
+        "adaptedBy": "Adapted by",
+        "statistics": "Statistics",
+        "suggestions": "Send suggestion"
     }
 }
