@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
+// import Link from 'next/link'
 
 // import Changelog from 'components/Changelog.jsx'
 // import Contributors from 'components/Contributors.jsx'
@@ -194,7 +194,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
             {translate.home.descargarDatosJSON}
           </a>
 
-          <Link href='/como-incrustar'>
+          {/* <Link href='/como-incrustar'>
             <a className={styles.download}>
               <Image
                 width={32}
@@ -204,7 +204,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
               />
               {translate.home.incrustarDatos}
             </a>
-          </Link>
+          </Link> */}
         </main>
 
         <h2 className={styles.subtitle}>{translate.home.porComunidadesAutonomas}</h2>
