@@ -1,21 +1,21 @@
 // global SEO config
 const title = 'Overvågningen af covid-19-vaccinationstilslutning i Danmark'
 const description =
-  'Consulta el estado y progreso de la vacunación del COVID-19 de forma diaria según datos del gobierno.'
+  'Check status og fremskridt for COVID-19-vaccination dagligt i henhold til Statens Serum Instituts data.'
 
 const SEO = {
   title,
   description,
-  canonical: 'https://covid-vaccine-dk.vercel.app',
+  canonical: 'https://covid-vaccine.dk',
   openGraph: {
     type: 'website',
     locale: 'da_DK',
-    url: 'https://covid-vaccine-dk.vercel.app',
+    url: 'https://covid-vaccine.dk',
     title,
     description,
     images: [
       {
-        url: 'https://covid-vaccine-dk.vercel.app/og.png',
+        url: 'https://covid-vaccine.dk/og.png',
         alt: title,
         width: 1200,
         height: 627
@@ -23,8 +23,8 @@ const SEO = {
     ]
   },
   twitter: {
-    handle: '@midudev',
-    site: '@midudev',
+    handle: '@sirMartinPiribi',
+    site: '@sirMartinPiribi',
     cardType: 'summary_large_image'
   }
 }
