@@ -54,7 +54,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         <meta name='theme-color' content='#d2effd' />
         <link rel='alternate' href='https://covid-vaccine-dk.vercel.app/' hrefLang='x-default' />
         <link rel='alternate' href='https://covid-vaccine-dk.vercel.app/en' hrefLang='en' />
-
+        <script async defer data-website-id='6e61cfae-3c6b-4ab4-931b-c4848f34fc01' src='https://umami-virid.vercel.app/umami.js' />
       </Head>
       <div id='container' className={styles.container}>
         <main className={styles.main}>

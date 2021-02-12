@@ -17,6 +17,7 @@ export default function EjemploEmbed () {
     <>
       <Head>
         <title>{translate.howtoembed.pageTitle} - covid-vaccine-dk.vercel.app</title>
+        <script async defer data-website-id='6e61cfae-3c6b-4ab4-931b-c4848f34fc01' src='https://umami-virid.vercel.app/umami.js' />
       </Head>
       <section id='container'>
         <Link href='/'>
